@@ -1,6 +1,5 @@
 <html>
 <body>
-<h2>Hello World!</h2>
-<jsp:forward page="/employee" /> 
+<jsp:include page="jsp/home-page.jsp"></jsp:include>
 </body>
 </html>
