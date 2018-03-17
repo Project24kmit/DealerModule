@@ -18,9 +18,25 @@
       <scope>provided</scope>
     </dependency>
 	<dependency>
+	    <groupId>org.apache.tomcat</groupId>
+	    <artifactId>tomcat</artifactId>
+	    <version>9.0.6</version>
+	    <type>pom</type>
+	</dependency>
+	<dependency>
 	   <groupId>mysql</groupId>
 	   <artifactId>mysql-connector-java</artifactId>
 	   <version>5.1.44</version>
+	</dependency>
+	<dependency>
+		<groupId>jstl</groupId>
+		<artifactId>jstl</artifactId>
+		<version>1.2</version>
+	</dependency>
+	<dependency>
+		<groupId>taglibs</groupId>
+		<artifactId>standard</artifactId>
+		<version>1.1.2</version>
 	</dependency>
   </dependencies>
 

@@ -47,7 +47,6 @@
 		      </div>
 		    </div>
 		  </div>
-		  
 		</div>
 		
 		<!-- The Dealer Login Modal -->
@@ -73,7 +72,6 @@
 		      </div>
 		    </div>
 		  </div>
-		  
 		</div>
 		
 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

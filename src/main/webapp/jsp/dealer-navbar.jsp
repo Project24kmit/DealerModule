@@ -9,8 +9,8 @@
           Add
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Add product</a>
-          <a class="dropdown-item" href="#">Add category</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addProductModal">Add product</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addCategoryModal">Add category</a>
         </div>
       </li>
 	  <li class="nav-item">
