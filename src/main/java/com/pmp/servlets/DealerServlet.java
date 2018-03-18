@@ -71,9 +71,7 @@ public class DealerServlet extends HttpServlet {
 			product.setStockQuantity(Integer.parseInt(request.getParameter("productQuantity")));
 
 			Part filePart = request.getPart("productImage");
-			String fileName = filePart.getSubmittedFileName();
-			System.out.println(fileName);
-			product.setProductImage(fileName);
+			product.setProductImage(filePart.getInputStream());
 
 			return product;
 		} catch (IOException | ServletException e) {

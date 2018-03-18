@@ -1,5 +1,7 @@
 package com.pmp.elements;
 
+import java.io.InputStream;
+
 public class Product {
 
 	private int productId;
@@ -9,7 +11,7 @@ public class Product {
 	private String productDescription;
 	private Float cost;
 	private int stockQuantity;
-	private String productImage;
+	private InputStream productImage;
 
 	public void setProductId(int productId) {
 		this.productId = productId;
@@ -67,11 +69,11 @@ public class Product {
 		return stockQuantity;
 	}
 
-	public void setProductImage(String productImage) {
+	public void setProductImage(InputStream productImage) {
 		this.productImage = productImage;
 	}
 
-	public String getProductImage() {
+	public InputStream getProductImage() {
 		return productImage;
 	}
 }

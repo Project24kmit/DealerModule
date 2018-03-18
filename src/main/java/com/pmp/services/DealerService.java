@@ -4,10 +4,6 @@ import static com.pmp.sql.SQLQueries.INSERT_INTO_CATEGORY_TABLE;
 import static com.pmp.sql.SQLQueries.INSERT_INTO_PRODUCT_TABLE;
 import static com.pmp.sql.SQLQueries.SELECT_FROM_DEALER_TABLE;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -55,14 +51,9 @@ public class DealerService {
 			preparedStmt.setString(4, product.getProductDescription());
 			preparedStmt.setFloat(5, product.getCost());
 			preparedStmt.setInt(6, product.getStockQuantity());
+			preparedStmt.setBinaryStream(7, product.getProductImage());
 
-			File image = new File(product.getProductImage());
-			FileInputStream imageInputStream = new FileInputStream(image);
-			preparedStmt.setBinaryStream(7, (InputStream) imageInputStream, (int) (image.length()));
-			
 			preparedStmt.executeUpdate();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
