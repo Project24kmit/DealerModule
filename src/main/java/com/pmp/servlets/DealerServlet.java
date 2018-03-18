@@ -15,6 +15,7 @@ import javax.servlet.http.Part;
 import com.pmp.elements.Product;
 import com.pmp.services.CategoryService;
 import com.pmp.services.DealerService;
+import com.pmp.services.ProductService;
 import com.pmp.sql.DatabaseConnector;
 
 @WebServlet("/dealer")
@@ -26,9 +27,13 @@ public class DealerServlet extends HttpServlet {
 	Connection dbconnection = DatabaseConnector.getDBConnection();
 	DealerService dealerService = new DealerService(dbconnection);
 	CategoryService categoryService = new CategoryService(dbconnection);
+	ProductService productService = new ProductService(dbconnection);
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		request.setAttribute("categories", categoryService.getAllCategories());
+		request.setAttribute("products",
+				productService.getAllProductsByDealerId(Integer.parseInt(request.getParameter("userId"))));
 		request.getRequestDispatcher("jsp/dealer-home-page.jsp").forward(request, response);
 	}
 

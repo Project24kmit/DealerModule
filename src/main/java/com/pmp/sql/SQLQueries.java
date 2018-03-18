@@ -8,4 +8,6 @@ public class SQLQueries {
 	public static final String INSERT_INTO_CATEGORY_TABLE = "INSERT INTO category(name) VALUES(?);";
 	public static final String INSERT_INTO_PRODUCT_TABLE = "INSERT INTO product(dealerId, name, categoryId, description, cost, stock, image) VALUES(?,?,?,?,?,?,?);";
 	public static final String SELECT_CATEGORY_BY_CATEGORYNAME = "SELECT categoryId FROM category WHERE name=?;";
+	public static final String SELECT_ALL_PRODUCTS_BY_DEALERID = "SELECT * FROM product WHERE dealerId=?;";
+	public static final String SELECT_ALL_CATEGORIES = "SELECT * FROM category;";
 }
